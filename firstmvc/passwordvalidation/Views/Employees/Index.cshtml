@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Employee List";
+}
+
+<h1>Catalog</h1>
+<hr/>
+<div class="text-center">
+    @{
+        List<Employee> allEmployees=(List<Employee>)ViewData["catalog"]; 
+        <ol>
+            @foreach(Employee employee in allEmployees){
+                <li>@employee.FirstName @employee.LastName</li>
+            }
+        </ol>
+    } 
+    <hr/>
+</div>
